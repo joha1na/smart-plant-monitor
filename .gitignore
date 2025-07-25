@@ -1,0 +1,203 @@
+# Smart Plant Monitor - IoT Project .gitignore
+
+# ===========================================
+# IDE & Editor Files
+# ===========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===========================================
+# Python
+# ===========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.virtualenv
+
+# ===========================================
+# Docker & Services Data
+# ===========================================
+# Docker volumes and persistent data
+*/data/
+*/logs/
+influxdb/data/
+influxdb/wal/
+influxdb/meta/
+grafana/data/
+grafana/logs/
+grafana/plugins/
+grafana.db
+mosquitto/data/
+mosquitto/log/
+
+# Docker override files
+docker-compose.override.yml
+
+# ===========================================
+# IoT & Hardware Specific
+# ===========================================
+# ESP32 MicroPython
+*.mpy
+.micropython/
+.thonny/
+
+# Hardware configuration with secrets
+**/secrets.py
+**/config_local.py
+**/wifi_credentials.py
+
+# ===========================================
+# Node-RED
+# ===========================================
+**/node-red/data/
+**/node-red/.flows.json.backup
+**/node-red/.config.json
+**/node-red/flows_*_cred.json
+**/node-red/node_modules/
+
+# ===========================================
+# Security & Credentials
+# ===========================================
+# Environment files
+.env
+.env.*
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa*
+*.ppk
+
+# Cloud credentials
+.aws/
+.gcp/
+.azure/
+
+# ===========================================
+# Logs & Temporary Files
+# ===========================================
+# Logs
+*.log
+logs/
+log/
+dmesg.txt
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+.cache/
+cache/
+
+# Database files
+*.db
+*.sqlite*
+
+# ===========================================
+# Backup & Archive Files
+# ===========================================
+*.bak
+*.backup
+*.old
+backup/
+backups/
+*.zip
+*.tar.gz
+*.tar.bz2
+*.7z
+
+# ===========================================
+# Project Specific
+# ===========================================
+# Development files
+dev_*
+test_*
+experiments/
+sandbox/
+test_data/
+
+# Private documentation
+docs/sprints/*_private.md
+docs/schematics/*.pdf
+docs/images/raw/
+
+# Local configuration
+config_local.yml
+local_settings.py
+
+# ESP32-Cam captures (keep examples)
+esp32/captures/
+esp32/timelapse/
+*.mp4
+*.avi
+*.mov
+
+# ===========================================
+# Package Managers
+# ===========================================
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===========================================
+# IMPORTANT: Files TO KEEP
+# ===========================================
+# Docker Compose files
+!docker-compose.yml
+!docker-compose.*.yml
+
+# Node-RED flows (without credentials)
+!**/flows.json
+
+# Configuration templates
+!**/*_template.*
+!**/*_example.*
+
+# Sample data
+!sample_data/
+!test_fixtures/
+
+# Essential documentation
+!docs/images/*.png
+!docs/images/*.jpg
+!docs/wiring/*.png
+!docs/fritzing/*.fzz
